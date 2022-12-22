@@ -3,8 +3,7 @@ This module contains unittests
 """
 import unittest
 import sys
-sys.path.insert(0, 'C:\\Users\\hanne\\Downloads\\xzceb-flask_eng_fr\\ \
-    final_project\\machinetranslation\\')
+sys.path.insert(0, 'C:\\Users\\hanne\\Downloads\\xzceb-flask_eng_fr\\final_project\\machinetranslation\\')
 from translator import english_to_french, french_to_english
 
 
