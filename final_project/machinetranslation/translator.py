@@ -1,3 +1,6 @@
+"""
+This module contains translation functions
+"""
 import json
 import os
 from ibm_watson import LanguageTranslatorV3
@@ -18,7 +21,8 @@ language_translator = LanguageTranslatorV3(
 
 language_translator.set_service_url(f'{url}')
 
-def englishToFrench(english_text):
+
+def english_to_french(english_text):
     """
     Translates english text to french text
     """
@@ -27,9 +31,10 @@ def englishToFrench(english_text):
     translation = language_translator.translate(
         text=english_text,
         model_id='en-fr').get_result()
-    return translation.translations
+    return translation['translations'][0]['translation']
 
-def frenchToEnglish(frencht_text):
+
+def french_to_english(frencht_text):
     """
     Translates french text to english text
     """
@@ -38,4 +43,4 @@ def frenchToEnglish(frencht_text):
     translation = language_translator.translate(
         text=frencht_text,
         model_id='fr-en').get_result()
-    return translation.translations
+    return translation['translations'][0]['translation']
