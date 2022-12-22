@@ -3,7 +3,6 @@ Flask app
 """
 from machinetranslation import translator
 from flask import Flask, render_template, request
-import json
 
 app = Flask("Web Translator")
 
@@ -23,7 +22,6 @@ def french_to_english():
     Translates french to english
     """
     text_to_translate = request.args.get('textToTranslate')
-    # Write your code here
     return translator.french_to_english(text_to_translate)
 
 
