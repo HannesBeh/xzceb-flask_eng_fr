@@ -21,6 +21,12 @@ class MyTestTranslator(unittest.TestCase):
         Test goodbye translation
         """
         self.assertEqual(english_to_french('Goodbye'), 'Au revoir')
+    
+    def test_goodbye2(self):
+        """
+        Test goodbye translation v2
+        """
+        self.assertNotEqual(english_to_french('Goodbye'), 'Test')
 
     def test_null_input_english(self):
         """
@@ -54,6 +60,12 @@ class MyTestTranslator(unittest.TestCase):
         Tests bonjour translation
         """
         self.assertEqual(french_to_english('Bonjour'), 'Hello')
+
+    def test_bonjour2(self):
+        """
+        Tests bonjour translation
+        """
+        self.assertNotEqual(french_to_english('Bonjour'), 'Test')
 
 
 if __name__ == '__main__':
